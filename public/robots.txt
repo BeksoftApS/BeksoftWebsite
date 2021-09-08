@@ -1,0 +1,4 @@
+Sitemap: https://beksoft.dk/sitemap.xml
+User-agent: *
+Allow: /index.html
+Allow: /images/

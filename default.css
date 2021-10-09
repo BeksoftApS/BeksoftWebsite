@@ -1,0 +1,419 @@
+html {
+    height: 100%;
+    /* Firefox Scrolling For Navbar */
+    scrollbar-color: #306050 #051015;
+}
+
+/* chromium */
+html::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* chromium */
+html::-webkit-scrollbar-track {
+    /*box-shadow: inset 0 0 5px grey; */
+    border-radius: 10px;
+    background: #051015;
+}
+
+/* chromium */
+html::-webkit-scrollbar-thumb {
+    background: #306050;
+    border-radius: 10px;
+}
+
+/* chromium
+html::-webkit-scrollbar-thumb:hover {
+    background: #CCCCCC;
+}
+*/
+
+body {
+    margin: 0;
+    background: #112328;
+    display: grid;
+    grid-template-columns: 250px 8fr;
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 100%;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+p {
+    line-height: 40px;
+}
+
+ul {
+    line-height: 45px;
+    font-size: 1.2em;
+}
+
+nav {
+    display: grid;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 250px;
+    background: linear-gradient(black 275px, #030705 300px,#408060 750px);
+    grid-template-rows: minmax(268px, auto) minmax(100px, 1fr) minmax(72px, auto);
+}
+
+
+/*
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    align-self: start;
+    max-height: 100%;
+    overflow-y: auto;
+    line-height: 35px;
+
+    scrollbar-color: rgba(255,255,255,0.2) transparent;
+    scrollbar-width: thin;
+}
+*/
+
+nav a {
+    background: rgba(0,0,0,0);
+    color: white;
+    font-size: 1.3em;
+    font-weight: bolder;
+    cursor: pointer;
+    padding: 20px 35px 20px 35px;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-select: none;
+
+    transition: font-size 0.4s, padding 0.4s;
+}
+
+nav div a:hover {
+    background: rgba(255,255,255,0.2);
+    color: #6bbe54;
+}
+
+div.menuLinks {
+    display: block;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    scrollbar-color: rgba(255,255,255,0.2) transparent;
+    scrollbar-width: thin;
+}
+
+div.menuLinks a {
+    display: block;
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+/* chromium */
+nav div.menuLinks::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* chromium */
+nav div.menuLinks::-webkit-scrollbar-track {
+    /*box-shadow: inset 0 0 5px grey; */
+    border-radius: 10px;
+}
+
+/* chromium */
+nav div.menuLinks::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+/* chromium */
+nav div.menuLinks::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,0.1);
+}
+
+nav>img#logo {
+    display: block;
+    width: 165px;
+    height: 205px;
+    margin: 30px auto 50px auto;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-select: none;
+    cursor: pointer;
+    transition: width 0.4s, height 0.4s;
+}
+
+.presseLogo {
+    width: 165px;
+    height: 205px;
+    cursor: pointer;
+}
+
+.presseBillede {
+    min-width: 600px;
+    width: 70%;
+    border: 3px solid black;
+}
+
+
+.menuLink {
+
+}
+
+.mLSelected {
+    background: rgba(255,255,255,0.2);
+}
+
+.discordLogo {
+    width: 226px;
+    height: 50px;
+    margin: 25px 0px;
+    padding: 8px 10px;
+    border: 3px solid white;
+    max-width: 140px;
+    align-self: end;
+    justify-self: center;
+    cursor: pointer;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-select: none;
+}
+
+.discordLogo:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+#discordImage {
+    width: 1286px;
+
+    /* max-width: 100%; */
+}
+
+.fullscreenImg {
+    max-width: calc(100% - 6px);
+    width: auto;
+    border: 3px solid black;
+}
+
+.useCaseDiagramImg {
+    filter: brightness(0.75);
+    max-width: 100%;
+    min-width: 200px;
+    border: 3px solid black;
+}
+
+.pageContainer {
+    display: grid;
+}
+
+.contentContainer {
+    display: none;
+    color: white;
+    padding: 180px 100px 100px 100px;
+    /* background: #112328; */
+    background: linear-gradient(black 250px, #112328 550px);
+}
+
+.contentContainer h1 {
+    font-size: 3.5em;
+
+}
+
+.contentContainer h2 {
+    font-size: 1.8em;
+}
+
+.contentContainer p {
+    font-size: 1.3em;
+}
+
+.lightgreenColor {
+    font-weight: 700;
+    font-size: 1.3em;
+    color: lightgreen;
+}
+
+
+ul.wideBullets li {
+    padding: 5px 10px;
+    font-size: 1.3em;
+}
+
+a.greenLightning {
+    color: #5cb789;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.greenLightning:hover {
+    color: #17c936;
+    text-decoration: underline;
+}
+
+.boxContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+    grid-gap: 30px;
+}
+
+.boxContainer a {
+    border: 2px solid #408060;
+    padding: 15px;
+    max-width: 300px;
+}
+
+@media (max-width: 1600px) {
+    nav>img#logo {
+        width: 132px;
+        height: 164px;
+    }
+
+    nav>ul>li {
+        /*font-size: 1.2em;*/
+        padding: 10px 5px 10px 38px;
+    }
+}
+
+@media (max-width: 1400px) {
+    nav>img#logo {
+        width: 132px;
+        height: 164px;
+        margin: 10px auto 20px auto;
+    }
+
+    nav>ul>li {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 1200px) {
+    nav>img#logo {
+        width: 121px;
+        height: 150px;
+        margin: 10px auto 20px auto;
+    }
+}
+
+@media (max-height: 600px) and (min-width: 901px) {
+    nav>img#logo {
+        width: 99px;
+        height: 123px;
+        margin: 5px auto 10px auto;
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    html::-webkit-scrollbar-thumb {
+        background: #306050;
+        border-radius: 10px;
+    }
+
+    .filler {
+        /*display: none;*/
+
+        display: block;
+        width: 100%;
+        min-height: 700px;
+        position: absolute;
+        z-index: -2;
+    }
+
+    nav {
+        background: #306050;
+        position: unset;
+        left: unset;
+        top: unset;
+        height: unset;
+        width: unset;
+
+        display: grid;
+        padding-bottom: 15px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav>ul>li {
+        padding-top: 15px;
+        padding-right: unset;
+        padding-bottom: 15px;
+        padding-left: unset;
+        margin: unset;
+        font-size: 1.5em;
+    }
+
+
+    nav>img#logo {
+        padding: unset;
+        min-width: unset;
+        width: 80%;
+        justify-self: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin: 10px auto 15px auto;
+    }
+
+    .contentContainer {
+        padding: 20px;
+        background: #112328;
+    }
+
+    img.fullscreenImg {
+        width: calc(100% - 6px);
+        border: 3px solid black;
+    }
+
+    img.presseBillede {
+        min-width: 200px;
+        width: calc(100% - 6px);
+    }
+
+    .useCaseDiagramImg {
+        filter: unset;
+        max-width: calc(100% - 6px);
+    }
+}
+
+.showPricesButton {
+    min-width: 200px;
+    max-width: 700px;
+    height: 75px;
+    font-size: 1.5em;
+    background: transparent;
+    color: white;
+    border: 2px solid #408060;
+    cursor: pointer;
+}
+
+.box.centerText {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+}

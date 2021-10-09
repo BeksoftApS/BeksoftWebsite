@@ -2,3 +2,8 @@ Sitemap: https://beksoft.dk/sitemap.xml
 User-agent: *
 Allow: /index.html
 Allow: /images/
+Allow: /service/
+Allow: /produkter/
+Allow: /omos/
+Allow: /presse/
+Allow: /kontakt/

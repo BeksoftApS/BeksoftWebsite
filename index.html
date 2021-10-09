@@ -2,7 +2,7 @@
 <html lang="da">
 <head>
     <meta charset="UTF-8">
-    <title>Beksoft ApS</title>
+    <title>Beksoft ApS - Bestil Et Skræddersyet Web Applikation</title>
     <meta name="description" content="Vores mål er at lave software til virksomheder, så deres IT-systemer eller websider kan vedligeholdes så effektivt og hurtigt som muligt." />
     <meta name="author" content="Beksoft ApS" />
     <meta name="viewport" content="width=device-width" />
@@ -17,465 +17,108 @@
     <link rel="canonical" href="https://beksoft.dk" />
     <link rel="icon" href="/images/logo/logo.svg" sizes="any" type="image/svg+xml"/>
     <link rel="apple-touch-icon" href="/images/logo/logo.svg" sizes="any" type="image/svg+xml"/>
-    <style>
-        html {
-            height: 100%;
-            max-width: 2000px;
-        }
-
-        body {
-            margin: 0;
-            background: #112328;
-            display: grid;
-            grid-template-columns: 250px 8fr;
-            min-height: 100%;
-            font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-        }
-
-        nav {
-            display: grid;
-            position: fixed;
-            left: 0px;
-            top: 0px;
-            height: 100%;
-            width: 250px;
-            background: #408060;
-            overflow-y: auto;
-            grid-template-rows: auto 1fr auto;
-        }
-
-        nav>img#logo {
-            display: grid;
-            width: 165px;
-            height: 205px;
-            margin: 30px auto 50px auto;
-            justify-self: center;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -o-user-select: none;
-            -webkit-user-drag: none;
-            -khtml-user-drag: none;
-            -moz-user-drag: none;
-            -o-user-drag: none;
-            user-select: none;
-            cursor: pointer;
-            transition: width 0.4s, height 0.4s;
-        }
-
-        .presseLogo {
-            width: 165px;
-            height: 205px;
-            cursor: pointer;
-        }
-
-        .presseBillede {
-            min-width: 600px;
-            width: 70%;
-            border: 3px solid black;
-        }
-
-
-        nav>ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: grid;
-            align-self: start;
-        }
-
-        nav>ul>li {
-            background: rgba(0,0,0,0);
-            color: white;
-            font-size: 1.3em;
-            font-weight: bolder;
-            cursor: pointer;
-            padding: 15px 5px 15px 38px;
-
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -o-user-select: none;
-            -webkit-user-drag: none;
-            -khtml-user-drag: none;
-            -moz-user-drag: none;
-            -o-user-drag: none;
-            user-select: none;
-
-            transition: font-size 0.4s, padding 0.4s;
-        }
-
-        nav>ul>li:hover {
-            background: rgba(255,255,255,0.2);
-        }
-
-        nav>ul>li>span{
-        }
-
-        .menuLink {
-
-        }
-
-        .mLSelected {
-            background: rgba(255,255,255,0.2);
-        }
-
-        .discordLogo {
-            width: 226px;
-            height: 50px;
-            margin: 25px 0px;
-            padding: 8px 10px;
-            border: 3px solid white;
-            max-width: 140px;
-            align-self: end;
-            justify-self: center;
-            cursor: pointer;
-
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -o-user-select: none;
-            -webkit-user-drag: none;
-            -khtml-user-drag: none;
-            -moz-user-drag: none;
-            -o-user-drag: none;
-            user-select: none;
-        }
-
-        .discordLogo:hover {
-            background: rgba(255,255,255,0.2);
-        }
-
-        .fullscreenImg {
-            width: calc(100% - 6px);
-            border: 3px solid black;
-        }
-
-        .useCaseDiagramImg {
-            filter: brightness(0.75);
-            max-width: 100%;
-            min-width: 200px;
-            border: 3px solid black;
-        }
-
-        .pageContainer {
-            display: grid;
-        }
-
-        .contentContainer {
-            display: none;
-            color: white;
-            padding: 30px 100px 100px 100px;
-            background: #112328;
-        }
-
-        .contentContainer h1 {
-            font-size: 3.5em;
-
-        }
-
-        .contentContainer h2 {
-            font-size: 1.8em;
-        }
-
-        .contentContainer p {
-            font-size: 1.3em;
-        }
-
-        .lightgreenColor {
-            font-weight: 700;
-            font-size: 1.3em;
-            color: lightgreen;
-        }
-
-
-        ul.wideBullets li {
-            padding: 5px 10px;
-            font-size: 1.3em;
-        }
-
-        a.greenLightning {
-            color: #5cb789;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        a.greenLightning:hover {
-            color: #17c936;
-            text-decoration: underline;
-        }
-
-        @media (max-width: 1600px) {
-            nav>img#logo {
-                width: 132px;
-                height: 164px;
-            }
-
-            nav>ul>li {
-                /*font-size: 1.2em;*/
-                padding: 10px 5px 10px 38px;
-            }
-        }
-
-        @media (max-width: 1400px) {
-            nav>img#logo {
-                width: 132px;
-                height: 164px;
-                margin: 10px auto 20px auto;
-            }
-
-            nav>ul>li {
-                font-size: 1.3em;
-            }
-        }
-
-        @media (max-width: 1200px) {
-            nav>img#logo {
-                width: 121px;
-                height: 150px;
-                margin: 10px auto 20px auto;
-            }
-        }
-
-        @media (max-height: 600px) and (min-width: 901px) {
-            nav>img#logo {
-                width: 99px;
-                height: 123px;
-                margin: 5px auto 10px auto;
-            }
-        }
-
-        @media (max-width: 900px) {
-            body {
-                grid-template-columns: 1fr;
-            }
-
-            .filler {
-                /*display: none;*/
-
-                display: block;
-                width: 100%;
-                height: 700px;
-                position: absolute;
-                z-index: -2;
-            }
-
-            nav {
-                position: unset;
-                left: unset;
-                top: unset;
-                height: unset;
-                width: unset;
-
-                display: grid;
-                padding-bottom: 15px;
-                justify-content: center;
-                text-align: center;
-            }
-
-            nav>ul>li {
-                padding-top: 15px;
-                padding-right: unset;
-                padding-bottom: 15px;
-                padding-left: unset;
-                margin: unset;
-                font-size: 1.5em;
-            }
-
-
-            nav>img#logo {
-                padding: unset;
-                min-width: unset;
-                width: 80%;
-                justify-self: center;
-                padding-top: 15px;
-                padding-bottom: 15px;
-                margin: 10px auto 15px auto;
-            }
-
-            .contentContainer {
-                padding: 20px;
-            }
-
-            img.fullscreenImg {
-                width: calc(100% - 6px);
-                border: 3px solid black;
-            }
-
-            img.presseBillede {
-                min-width: 200px;
-                width: calc(100% - 6px);
-            }
-
-            .useCaseDiagramImg {
-                filter: unset;
-                max-width: calc(100% - 6px);
-            }
-        }
-    </style>
+    <link href="/minidefault.css" rel="stylesheet" type="text/css">
+    <script src="/minimain.js"></script>
 </head>
 <body>
-<noscript>JavaScript is turned off, please turn it on!</noscript>
-<nav>
-    <img onclick="changePage(3)" id="logo" alt="Beksoft Logo" src="https://beksoft.dk/logo.svg">
-    <ul>
-        <li class="menuLink" onclick="changePage(0)"><span>Service</span></li>
-        <li class="menuLink" onclick="changePage(1)"><span>Produkter</span></li>
-        <li class="menuLink" onclick="changePage(2)"><span>Priser</span></li>
-        <!--<li class="menuLink"><span>Blog</span></li>-->
-        <li class="menuLink" onclick="changePage(3)"><span>Om os</span></li>
-        <li class="menuLink" onclick="changePage(4)"><span>Presse</span></li>
-        <li class="menuLink" onclick="changePage(5)"><span>Kontakt</span></li>
-    </ul>
-    <a href="https://discord.gg/6HJk5bsnY8" target="_blank" style="justify-self: center;"><img class="discordLogo" alt="Join vores discord (Beksoft)" src="/images/other/DiscordLogo.svg"></a>
-</nav>
-<div class="filler"></div>
-<div class="pageContainer">
-    <div class="contentContainer">
-        <h1>Services</h1>
-        <p>Bestil et IT-System eller Service. Beksoft ApS er specialister indenfor Webbaserede IT Applikationer.</p>
-        <p>Vi har kompetencerne til at lave konsulentarbejde for små og mellemstore virksomheder</p>
-        <p>Derfor tilbyder vi vores service som konsulenter indenfor IT Sikkerhed og IT Arkitektur.</p>
+    <noscript>JavaScript is turned off, please turn it on!</noscript>
+    <nav>
+        <a href="/omos/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/omos/',true,main.omos);"><img id="logo" alt="Beksoft Logo" src="https://beksoft.dk/logo.svg"></a>
+        <div class="menuLinks">
+            <a class="menuLink" href="/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/',true,main.oversigt);"><span>Oversigt</span></a>
+            <a class="menuLink" href="/service/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/service/',true,main.service);"><span>Service</span></a>
+            <a class="menuLink" href="/produkter/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/produkter/',true,main.produkter);"><span>Produkter</span></a>
+            <a class="menuLink" href="/omos/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/omos/',true,main.omos);"><span>Om os</span></a>
+            <a class="menuLink" href="/presse/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/presse/',true,main.presse);"><span>Presse</span></a>
+            <a class="menuLink" href="/kontakt/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/kontakt/',true,main.kontakt);"><span>Kontakt</span></a>
+        </div>
+        <a href="https://discord.gg/6HJk5bsnY8" target="_blank" style="justify-self: center;"><img class="discordLogo" alt="Join vores discord (Beksoft)" src="/images/other/DiscordLogo.svg"></a>
+    </nav>
+    <div class="filler"></div>
+    <div class="contentContainer" style="display: block;">
+        <h1>Velkommen til Beksoft ApS</h1>
+        <p>Hos Beksoft ApS udvikler vi innovativ ny teknologi med fokus på netværk. Vi er specialiseret i at udvikle web applikationer og multicollaboration software med netværksprogrammering.</p>
+        <p>Hos os kan du bestille konsulentservice til sikkerhedstjek og/eller implementering af Software, Websider og andet IT.</p>
+        <p>Du kan også bestille en webside, web applikation, skræddersyet software til dine behov eller købe licenser til software. Så igen velkommen til og spørg endelig ind til, hvad vi arbejder med,</p>
+        <p>så vi kan fortælle, hvordan web applikationer bliver bygget med nutidens og fremtidens standarder.</p>
         <br>
-        <h2>Softwareudvikling</h2>
-        <p>Vi kan lave software på bestilling. Her aftaler vi de "Funktionelle" og "Ikke-Funktionelle" krav</p>
-        <p>Efter vi er blevet enige om krav, arbejdstid, pris og udviklingskalender, går vi i gang med opgaven.</p>
-        <p>Vi kan lave alt fra System Software, Webapps, CRM, Automatision og Hjemmesider. <a class="greenLightning" onclick="changePage(2)">Se priser</a></p>
-        <a href="/images/other/UseCaseDiagramEksempel.jpg" target="_blank"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="useCaseDiagram" class="useCaseDiagramImg" alt="Use Case diagram af funktionelle krav"></a>
+        <h2>Oversigt</h2>
+        <div class="boxContainer" style="display: grid;">
+            <a style="text-decoration: none; color: white;" onclick="main.link.click('/service/',true,main.service);"><div class="box centerText"><h3>Service</h3></div></a>
+            <a style="text-decoration: none; color: white;" onclick="main.link.click('/produkter/',true,main.produkter);"><div class="box centerText"><h3>Produkter</h3></div></a>
+            <a style="text-decoration: none; color: white;" onclick="main.link.click('/omos/',true,main.omos);"><div class="box centerText"><h3>Om os</h3></div></a>
+            <a style="text-decoration: none; color: white;" onclick="main.link.click('/kontakt/',true,main.kontakt);"><div class="box centerText"><h3>Kontakt</h3></div></a>
+        </div>
         <br>
-        <h2>Konsulentarbejde</h2>
-        <p>Hvis i bestiller os som konsulenter, aftales et par dages møder, </p>
-        <p>hvor vi gennemgår jeres ønsker til nyt IT System eller eksisterende IT System.</p>
-        <p>Vi kan også gennemgå løsninger eller gennemtjekke, hvor i kan optimatisere.</p>
-        <p><a class="greenLightning" onclick="changePage(2)">Se priser</a> for en konsulentpakke eller pris per time tid.</p>
+        <h2>Promoveringer</h2>
+        <article style="border: 2px solid #408060; padding: 10px;">
+            <h2>Lynhurtig, Elite-SEO og Sikker Webside</h2>
+            <p>Vores websider er lynhurtige, har smadder god SEO og er topsikret</p>
+            <p>Tag ikke bare vores ord for det, tjek vores side på følgende platforme (skriv beksoft.dk):</p>
+            <p><a style="color: #408060" href="https://sikkerpånettet.dk">https://sikkerpånettet.dk</a></p>
+            <p><a style="color: #408060" href="https://www.seobility.net/en/seocheck/">https://www.seobility.net/en/seocheck/</a></p>
+            <p><a style="color: #408060" href="https://gtmetrix.com">https://gtmetrix.com</a></p>
+            <p><a style="color: #408060" href="https://developers.google.com/speed/pagespeed/insights/?hl=da">https://developers.google.com/speed/pagespeed/insights/</a></p>
+            <p>Sammenlign derefter med din side eller en side du anvender.</p>
+            <p style="font-weight: 700;">Lars Morten Bek | 09-10-2021</p>
+        </article>
+        <h2>Seneste Nyt</h2>
+        <article style="border: 2px solid #408060; padding: 10px;">
+            <h2>Cybersikkerhedsmåned</h2>
+            <p>Vi kører i øjeblikket en kampagne, hvor vi vil gøre opmærksom på IT Sikkerheden.</p>
+            <p>Alt for få har styr på sikkerheden og det kan gå ud over både arbejdet såvel som privatlivet,</p>
+            <p>derfor vil vi tilbyde professionel hjælp til både private og virksomheder.</p>
+            <p>Det kunne være I skal anskaffe jer en password manager, sætte noget 2 faktor authentication op</p>
+            <p>eller få kigget på jeres IT Sikkerhed ved for eksempel DNS eller backup</p>
+            <p>I hele oktober tilbyder vi gratis konsulentarbejde for cybersikkerhed for at sprede vores netværk</p>
+            <p style="font-weight: 700;">Lars Morten Bek | 09-10-2021</p>
+        </article>
+        <h2>Priser</h2>
+        <p>Vores priser er meget forskellige baseret på kundens behov</p>
+        <p>Nedenunder kan der ses estimater på, hvad services kan koste hos os.</p>
+        <p>Bemærk at priserne kun er vejledende (inklusiv moms):</p>
+        <button onclick="togglePrices();" class="showPricesButton">Se Priser</button>
+        <div id="prices" style="display: none; border: 2px solid #408060; padding: 10px; margin-top: 15px; margin-bottom: 15px;">
+            <h3>Konsulent Service</h3>
+            <p>Per kunde: Første 6 timer gratis, derefter 500dkk per time</p>
+            <p>Loyale kunder: Individuelle priser under 400dkk per time</p>
+            <h3>BEKCMS</h3>
+            <ul>
+                <li>Simpel Webside med BEKCMS: 1000dkk</li>
+                <li>Advanceret Webside med BEKCMS: 3000dkk</li>
+                <li>Elite Webside eller Webshop med BEKCMS: 6000dkk</li>
+                <li>Shared Hosting af webside med BEKCMS på vores Cloud VPS: 100dkk per år</li>
+                <li>Cloud VPS for din virksomhed gennem os: 150dkk per måned</li>
+            </ul>
+            <h3>Wordpress</h3>
+            <ul>
+                <li>Simpel Webside med Wordpress: 3500dkk</li>
+                <li>Advanceret Webside med Wordpress: 11000dkk</li>
+                <li>Webshop med Wordpress: 25000dkk</li>
+            </ul>
+            <h3>Vores Produkter</h3>
+            <ul>
+                <li>BEKCMS licens: 500dkk per år</li>
+                <li>BEKCMS Reselling licens: 5000dkk per år</li>
+                <li>SmileyApp Licens: efter aftale men mindst 100000dkk per år</li>
+            </ul>
+            <h3>Backup og support</h3>
+            <ul>
+                <li>IT Support Pakke: 500kroner per måned (op til 10 timer)</li>
+                <li>IT Support Pakke: 1500kroner per måned (op til 37 timer)</li>
+                <li>Daglig Backup Aftale: 500dkk per år (op til 100gb)</li>
+            </ul>
+        </div>
         <br>
-        <h2>Direkte Kommunikation</h2>
-        <p>Vi går op i at have direkte kommunikation med kunden!</p>
-        <p>Som kunde kan du kontakte os gennem stort set alle kommunikationsmidler</p>
-        <p>Vi foretrækker Discord, Email eller SMS</p>
-        <p>Vi kan også booke et lokale til et for dig uforpligtende og gratis fysisk møde, hvor vi kan starte en dialog.</p>
-        <a href="/images/other/BeksoftDiscord.jpg" target="_blank"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="discordImage"  class="fullscreenImg" alt="Join vores discord og kommuniker med os direkte"></a>
+        <p>Kontakt os for at høre mere, priser kan variere alt efter behov.</p>
+        <p>I kan gå til vores discord i venstre side og begynde at skrive til os uden at skulle finde login eller email frem.</p>
         <br>
-        <h2>Følg med i vores udvikling</h2>
-        <p>Som kunde har du mulighed for at se arbejdsopgaverne blive løst,</p>
-        <p>som en del af aftalen kan i nemlig blive gæstebrugere på vores Monday.com og Github.com sider.</p>
-        <p>Her kan i se estimeret tid og se koden blive udviklet. (Vi tager selvfølgelig også imod private opgaver)</p>
-        <p>Vi lytter til vores kunder i forhold til deres ønsker og behov.</p>
-        <a href="/images/other/MondayPlanning.jpg" target="_blank"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="mondayPlanning" class="fullscreenImg" alt="Planlægning og overvågning af opgaver på monday"></a>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <section>
-            <h2>OBS:</h2>
-            <p style="color: yellow;">Da Beksoft ApS har travlt med arbejdsopgaver og vores fremtidige produkt "BekCMS", bliver webside designet<br> først udgivet Januar 2022. Kontakt os dog gerne hvis du vil bestille service eller købe et produkt.</p>
-        </section>
-    </div>
-    <div class="contentContainer">
-        <h1>Produkter</h1>
-        <br>
-        <h2>Få udviklet eget produkt</h2>
-        <p><a class="greenLightning" onclick="changePage(5)">Kontakt os</a> og <a class="greenLightning" onclick="changePage(2)">se priser</a></p>
-        <br>
-        <h2>BekServer Hosting</h2>
-        <p>Få en superhurtig webserver på en delt cloud VPS eller egen cloud VPS.</p>
-        <p>Kontakt os for at hoste din side</p>
-        <br>
-        <h2>BekCMS</h2>
-        <p>Brug BekCMS for at administrere eller vedligeholde din webside.</p>
-        <p>BekCMS kører på det nyeste og hurtigste teknologi på markedet.</p>
-        <p>Mere information til December 2021</p>
-        <br>
-        <h2>SmileyApp</h2>
-        <p>Bestil licens for at anvende SmileyApp til egenkontrol.</p>
-        <p>Lav evalueringer og kvalitetskontrol hurtigt og nemt. Velegnet til kunders tilbagemelinger, feedback og egenkontrol.</p>
-    </div>
-    <div class="contentContainer">
-        <h1>Priser</h1>
-        <p>Alle priser er ekslusiv moms. Forvent moms oveni.</p>
-        <p>Bemærk: Tidligere kunder kan have aftalt en anden fast timepris på en bestemt service. Priser kan sænkes alt efter aftale.</p>
-        <br>
-        <h2>Konsulent Service (for nye kunder)</h2>
-        <h3 class="lightgreenColor">IT Sikkerhed</h3>
-        <p>Pris: 2 dage gratis, herefter 600dkk per time (kontakt-tid er inkluderet i timetal)</p>
-        <h3 class="lightgreenColor">IT Arkitektur</h3>
-        <p>Pris: 2 dage gratis, herefter 500dkk per time (kontakt-tid er inkluderet i timetal)</p>
-        <h3 class="lightgreenColor">Ny-Udvikling</h3>
-        <p>Pris: 2 dage gratis, herefter 400dkk per time (kontakt-tid er inkluderet i timetal)</p>
-        <h3 class="lightgreenColor">Udvikling for eksisterende kunde</h3>
-        <p>Pris: Kan variere mellem 150dkk per time til 400dkk per time alt efter kundeloyalitet (kontakt-tid er inkluderet i timetal)</p>
-        <p>Bemærk: Inkluderer ikke SmileyApp videreudvikling</p>
-
-        <br>
-        <h2>Vedligeholdelse Service</h2>
-        <h3 class="lightgreenColor">Ikke-akut vedligeholdelse</h3>
-        <p>Pris: 1 dag gratis, herefter 300dkk per time (kontakt-tid er inkluderet i timetal)</p>
-        <p>Max Varighed: 35 timer</p>
-        <br>
-        <h2>Backup Service</h2>
-        <h3 class="lightgreenColor">Kritisk Backup</h3>
-        <p>Pris: 5dkk per gigabyte per år (Mindstepris: 250dkk per år)</p>
-        <p>Varighed: Årlig aftale, fornys hvert år</p>
-        <p>Aftale kan variere baseret på typen af data</p>
-        <br>
-        <h3 class="lightgreenColor">Er din webside gået ned? Skal vi hjælpe med et akut problem?</h3>
-        <p>Pris: 1000dkk + 500dkk per time (kontakt-tid er inkluderet i timetal)</p>
-        <p>Max Varighed: 35 timer</p>
-        <br>
-        <h2>Web Applikation</h2>
-        <br>
-        <h3 class="lightgreenColor">Hjemmeside, Administrationspanel eller andet (Dette tilbud gælder indtil November 2021)</h3>
-        <p>Pris: Mellem 1500dkk og 10000dkk</p>
-        <p>Varighed: 1 uge - 3 uger</p>
-        <br>
-        <h2>BekCMS (Udkommer til December 2021)</h2>
-        <br>
-        <h3 class="lightgreenColor">Lille informationsside til din virksomhed med BekCMS:</h3>
-        <p>Pris: Mellem 1000dkk og 3000dkk</p>
-        <p>Varighed: 4 dage</p>
-        <br>
-        <h3 class="lightgreenColor">Mellemstor hjemmeside til din virksomhed med BekCMS:</h3>
-        <p>Pris: Mellem 7000dkk og 15000dkk</p>
-        <p>Varighed: 2 uger</p>
-        <br>
-        <h3 class="lightgreenColor">Advanceret IT Applikation med BekCMS:</h3>
-        <p>Pris er afhængig af aftale og omfang. (vi tager i øjeblikket kun mod opgaver op til 3 måneders udviklingstid)</p>
-        <p>Pris: Mellem 10000dkk og 100000dkk</p>
-        <p>Varighed: 3 uger - 3 måneder</p>
-        <br>
-        <h2>Andet CMS end BekCMS</h2>
-        <h3 class="lightgreenColor">Lille wordpress informationsside til din virksomhed eller privat (Dette tilbud gælder indtil November 2021)</h3>
-        <p>Pris: Mellem 2500dkk og 6000dkk</p>
-        <p>Varighed: 1 uge</p>
-        <h3 class="lightgreenColor">Mellemstor wordpress side til din virksomhed (Dette tilbud gælder indtil November 2021)</h3>
-        <p>Pris: Mellem 15000dkk og 30000dkk</p>
-        <p>Varighed: 1 måned</p>
-        <br>
-        <h2>SmileyApp Licens</h2>
-        <p class="lightgreenColor">Efter aftale og omfang</p>
-        <p>Baseret på forbrug og størrelse af virksomhed</p>
-        <p>Kan variere mellem 1000dkk til 12000dkk per måned</p>
-        <p>Pris for udvikling af ny funktionalitet på SmileyApp:</p>
-        <p>700dkk per time</p>
-    </div>
-    <div class="contentContainer">
-        <h1>Om os</h1>
-        <p>Beksoft ApS er en lille virksomhed drevet af Lars Morten Bek.</p>
-        <p>Beksoft startede som Beksoft IVS den 22 Februar, og i november 2020 blev det til Beksoft ApS,
-            da der blev indskudt egenkapital i virksomheden.</p>
-        <br>
-        <h2>Vores Software</h2>
-        <p>Virksomhedens kerneværdier består af specialbyggede web applikationer til små og store virksomheder.</p>
-        <p>Vi har lavet SmileyApp og er i gang med at udvikle BekServer og BekCMS</p>
-        <p>Beksoft ApS kan hyres til at lave software til en aftalt pris. Kontakt os for et tilbud.</p>
-        <p>Vores software er bygget på egen hånd og vi ansætter også folk på deltid og freelancing,
-            når større opgaver kræver det, det kan være nødvendigt for at vedligeholde vores kontrakter.</p>
-        <p>Mellem januar 2021 til september 2021 havde vi vores første deltidsansat Gabriel, som hjalp med UI/UX til SmileyApp projektet.</p>
-        <br>
-        <h2>Sociale Medier & Andre Websider</h2>
-        <p>Vi kan følges på følgende sociale medier:</p>
+        <h2>Kontakt Information</h2>
+        <p>Email (Salg): salg@beksoft.dk</p>
+        <p>Email (Kontakt): kontakt@beksoft.dk</p>
+        <p>Email (GDPR): gdpr@beksoft.dk</p>
+        <p>CVR: 40293752</p>
+        <h3>Sociale Medier og andre websites:</h3>
         <ul class="wideBullets">
             <li><a class="greenLightning" target="_blank" href="https://www.linkedin.com/company/beksoft">Linkedin</a></li>
             <li><a class="greenLightning" target="_blank" href="https://www.facebook.com/BeksoftApS">Facebook</a></li>
@@ -483,182 +126,14 @@
             <li><a class="greenLightning" target="_blank" href="https://github.com/BeksoftApS">GitHub</a></li>
             <li><a class="greenLightning" target="_blank" href="https://discord.gg/6HJk5bsnY8">Discord</a></li>
         </ul>
-        <br>
-        <h2>Ansatte</h2>
-        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="billedeAfLars" alt="Billede af Lars Morten Bek">
-        <h3>Lars Morten Bek</h3>
-        <h4>Adm. Direktør & Software Arkitekt</h4>
-        <br>
-        <h3>Om LMB</h3>
-        <p>26 årig dansker der bor i Odense</p>
-        <p>Færdiguddannet Bachelor i Datalogi og Informatik fra Roskilde Universitet</p>
-        <p>Spidskompetencer: Network og Sikkerhed, Webbaseret IT, Oppetid og ressourceovervågning, Netværksbaseret kommunikation.</p>
-        <p>Programmeringssprog Backend: Golang, Python, Java, C# (.Net), C++, PHP, JavaScript (NodeJS)</p>
-        <p>Programmeringssprog Frontend: JavaScript</p>
-        <p>Markup og design: HTML, CSS, SVG</p>
-        <p>I starten af Beksoft ApS tid, vil det meste af vores software være centreret omkring den administrerende direktørs kompetencer.</p>
-        <p>Mellem 2008-2021 har Lars arbejdet med Webbaserede IT Applikationer i alle former,</p>
-        <p>han arbejder som IT Architekt på højt niveau og kan arbejde som Fullstack Developer</p>
-        <p>Kompetencer kan læses på hans <a class="greenLightning" href="https://www.linkedin.com/in/lmbek/" target="_blank">Linkedin profil</a></p>
-        <br>
-        <br>
-        <h2>Partnere</h2>
-        <p>Vi har pt ingen partner software virksomheder. Skriv hvis jeres virksomhed søger partnerskab.</p>
-    </div>
-    <div class="contentContainer">
-        <h1>Presse</h1>
-        <p>Logoet må kun bruges efter aftale, det kan hentes herunder ved at &quot;højreklikke&quot; på følgende:</p>
-        <div>
-            <h2>Logo i SVG Format (omkring 12kb)</h2>
-            <a href="https://beksoft.dk/logo.svg" target="_blank" class="presseLogo"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="presseLogo1" class="presseLogo" alt="Beksoft Logo"></a>
-        </div>
-        <div>
-            <h2>Logo i PNG mini format (280x348 px)</h2>
-            <a href="https://beksoft.dk/images/logo2020tiny.png" target="_blank" class="presseLogo"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="presseLogo2" class="presseLogo" alt="Beksoft Logo"></a>
-        </div>
-        <div>
-            <h2>Logo i PNG stort format (1646x2048 px)</h2>
-            <a href="https://beksoft.dk/images/Logo2020.png" target="_blank" class="presseLogo"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="presseLogo3" class="presseLogo" alt="Beksoft Logo"></a>
-        </div>
-        <div>
-            <h2>Logo med sort baggrund i PNG Format (2048x1152 px)</h2>
-            <a href="https://beksoft.dk/images/Logo2020Background.png" target="_blank" style="justify-self: center;"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="presseBillede1" class="presseBillede" alt="Beksoft Logo"></a>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-    </div>
-    <div class="contentContainer">
-        <h1>Kontakt</h1>
-        <p>Vi foretrækker kontakt over email. Skriv en email for at aftale et møde over nettet gennem videoopkald.</p>
-        <p>Vi anbefaler Google Meetings eller Discord. </p>
-        <p>Beksoft ApS kan oprette et mødelink og sende til jer på det aftalte tidspunkt.</p>
-        <br>
-        <h2>Kontakt oplysninger</h2>
-        <p>VIRKSOMHED: Beksoft ApS</p>
-        <p>CVR NR: 40293752</p>
-        <p>KONTAKTPERSON: Lars Morten Bek</p>
-        <p>KONTAKTPERSON EMAIL: Lars@Beksoft.dk</p>
-        <p>EMAIL: Kontakt@Beksoft.dk</p>
-        <p>TLF: +45 9383 0995 (Giv besked før opkald, ellers tages opkaldet ikke. Lig gerne telefonsvarer for at blive ringet op igen)</p>
-        <br>
-        <h2>Anden information om Beksoft ApS</h2>
-        <p>Der er aktuelt 2 ansatte i Beksoft ApS (1 deltid, 1 adm. direktør)</p>
+        <p>Like Beksoft ApS på vores sociale medier og få opdateringer løbende, hvordan det går os med udviklingen.</p>
+        <p>Dermed kan i også få direkte besked, når der kommer promoveringer eller tilbud.</p>
         <br>
         <h2>Privatlivspolitik</h2>
         <p>Vi logger ingen personfølsomme oplysninger ved brug af denne hjemmeside,</p>
         <p>derfor er der ikke behov for en privatlivspolitik på denne side.</p>
         <p>Hvis dine oplysninger (som gennem mailkontakt) ønskes slettet fra vores system bedes dette oplyst over gdpr@beksoft.dk</p>
+        <br>
     </div>
-    <script>
-        let activePage = null;
-        function hideImages(newPage){
-            // Hide images to save bandwidth and make faster loading
-            let images = [
-                {
-                    name : "Use Case Diagram",
-                    pageNumber: 0,
-                    src : "/images/other/UseCaseDiagramEksempel.jpg",
-                    elementReference : document.getElementById("useCaseDiagram")
-                },
-                {
-                    name : "Discord Image",
-                    pageNumber: 0,
-                    src : "/images/other/BeksoftDiscord.jpg",
-                    elementReference : document.getElementById("discordImage")
-                },
-                {
-                    name : "Monday Planning",
-                    pageNumber: 0,
-                    src : "/images/other/MondayPlanning.jpg",
-                    elementReference : document.getElementById("mondayPlanning")
-                },
-                {
-                    name : "Billede af Lars",
-                    pageNumber: 3,
-                    src : "/images/lars/LarsMBek.jpg",
-                    elementReference : document.getElementById("billedeAfLars")
-                },
-                {
-                    name : "presseLogo1",
-                    pageNumber: 4,
-                    src : "/images/logo/logo.svg",
-                    elementReference : document.getElementById("presseLogo1")
-                },
-                {
-                    name : "presseLogo2",
-                    pageNumber: 4,
-                    src : "/images/logo/logo2020tiny.png",
-                    elementReference : document.getElementById("presseLogo2")
-                },
-                {
-                    name : "presseLogo3",
-                    pageNumber: 4,
-                    src : "/images/logo/Logo2020.png",
-                    elementReference : document.getElementById("presseLogo3")
-                },
-                {
-                    name : "presseBillede1",
-                    pageNumber : 4,
-                    src : "/images/logo/Logo2020Background.png",
-                    elementReference : document.getElementById("presseBillede1")
-                }
-            ]
-
-            // Hide all other than active page
-            for(let i=0; i<images.length; i++){
-                if(newPage===images[i].pageNumber){
-                    images[i].elementReference.setAttribute("src",images[i].src);
-                } else {
-                    images[i].elementReference.setAttribute("src","data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==");
-                }
-            }
-        }
-
-        function changePage(newPage){
-            if(activePage!==newPage){
-                hideImages(newPage);
-
-                let contentContainers = document.getElementsByClassName('contentContainer');
-                for (let i = 0; i < contentContainers.length; i++) {
-                    if(i===newPage){
-                        contentContainers[i].style.display = "block";
-                        document.getElementsByClassName("menuLink")[i].className = "menuLink mLSelected";
-                    } else {
-                        contentContainers[i].style.display = "none";
-                        document.getElementsByClassName("menuLink")[i].className = "menuLink";
-                    }
-
-                }
-
-            }
-            activePage = newPage;
-            resetScroll();
-        }
-
-        function resetScroll(){
-            if(window.innerWidth <= 900){
-                window.scrollTo(0,700);
-            } else {
-                window.scrollTo(0,0);
-            }
-        }
-
-        changePage(0);
-
-        document.onreadystatechange = function () {
-            if (document.readyState === 'interactive') {
-            }
-            if (document.readyState === 'complete') {
-                window.setTimeout(()=>{ resetScroll(); }, 50)
-            }
-        }
-    </script>
-</div>
 </body>
 </html>

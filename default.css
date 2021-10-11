@@ -1,4 +1,5 @@
 html {
+    min-height: 500px;
     height: 100%;
     /* Firefox Scrolling For Navbar */
     scrollbar-color: #306050 #051015;
@@ -53,10 +54,12 @@ nav {
     position: fixed;
     left: 0px;
     top: 0px;
+    overflow-y: auto;
+    min-height: 500px;
     height: 100%;
     width: 250px;
     background: linear-gradient(black 275px, #030705 300px,#408060 750px);
-    grid-template-rows: minmax(268px, auto) minmax(100px, 1fr) minmax(72px, auto);
+    grid-template-rows: minmax(267px, auto) minmax(200px, 1fr) minmax(72px, auto);
 }
 
 
@@ -76,13 +79,15 @@ nav ul {
 }
 */
 
-nav a {
+
+
+nav a.menuLink {
     background: rgba(0,0,0,0);
     color: white;
     font-size: 1.3em;
     font-weight: bolder;
     cursor: pointer;
-    padding: 20px 35px 20px 35px;
+
 
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -140,11 +145,9 @@ nav div.menuLinks::-webkit-scrollbar-thumb:hover {
     background: rgba(0,0,0,0.1);
 }
 
-nav>img#logo {
+nav>a:nth-child(1) {
     display: block;
-    width: 165px;
-    height: 205px;
-    margin: 30px auto 50px auto;
+
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
@@ -156,6 +159,10 @@ nav>img#logo {
     user-select: none;
     cursor: pointer;
     transition: width 0.4s, height 0.4s;
+    /* padding: 20px 35px 20px 35px; */
+    padding: 20px 0 20px 0;
+    margin: 0 auto;
+    width: 65%;
 }
 
 .presseLogo {
@@ -206,8 +213,6 @@ nav>img#logo {
 }
 
 #discordImage {
-    width: 1286px;
-
     /* max-width: 100%; */
 }
 
@@ -229,7 +234,6 @@ nav>img#logo {
 }
 
 .contentContainer {
-    display: none;
     color: white;
     padding: 180px 100px 100px 100px;
     /* background: #112328; */
@@ -284,49 +288,45 @@ a.greenLightning:hover {
     max-width: 300px;
 }
 
-@media (max-width: 1600px) {
-    nav>img#logo {
-        width: 132px;
-        height: 164px;
-    }
+#larswithbeksoftlogo {
+    float: right;
+    max-width: 480px;
+    padding: 20px;
+    height: auto;
+    width: 90%;
+}
 
-    nav>ul>li {
-        /*font-size: 1.2em;*/
-        padding: 10px 5px 10px 38px;
-    }
+@media (max-width: 1600px) {
+
 }
 
 @media (max-width: 1400px) {
-    nav>img#logo {
-        width: 132px;
-        height: 164px;
-        margin: 10px auto 20px auto;
-    }
 
-    nav>ul>li {
+    nav a {
         font-size: 1.3em;
     }
 }
-
-@media (max-width: 1200px) {
-    nav>img#logo {
-        width: 121px;
-        height: 150px;
-        margin: 10px auto 20px auto;
+@media (max-width: 1320px) {
+    #larswithbeksoftlogo {
+        display: none;
     }
 }
 
-@media (max-height: 600px) and (min-width: 901px) {
-    nav>img#logo {
+@media (max-height: 600px) and (min-width: 701px) {
+    nav>a:nth-child(1) {
         width: 99px;
         height: 123px;
         margin: 5px auto 10px auto;
     }
+    nav {
+        grid-template-rows: 1fr minmax(180px, 10fr) 1fr;
+    }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
     body {
         grid-template-columns: 1fr;
+        grid-template-rows: 100% 0 auto;
     }
 
     html::-webkit-scrollbar-thumb {
@@ -335,13 +335,15 @@ a.greenLightning:hover {
     }
 
     .filler {
-        /*display: none;*/
-
+        display: none;
+/*
         display: block;
         width: 100%;
         min-height: 700px;
         position: absolute;
         z-index: -2;
+*/
+
     }
 
     nav {
@@ -351,36 +353,44 @@ a.greenLightning:hover {
         top: unset;
         height: unset;
         width: unset;
-
+        grid-template-rows: minmax(213px,auto) 1fr auto;
         display: grid;
         padding-bottom: 15px;
         justify-content: center;
         text-align: center;
     }
 
-    nav>ul>li {
+    nav>a:nth-child(1) {
         padding-top: 15px;
         padding-right: unset;
-        padding-bottom: 15px;
+        padding-bottom: unset;
         padding-left: unset;
         margin: unset;
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
 
-    nav>img#logo {
+    nav>a:nth-child(1) {
         padding: unset;
         min-width: unset;
         width: 80%;
         justify-self: center;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        margin: 10px auto 15px auto;
+        margin: 20px auto 20px auto;
+    }
+
+    .menuLinks {
+        padding: unset;
+    }
+
+    .menuLink {
+
     }
 
     .contentContainer {
         padding: 20px;
         background: #112328;
+        display: block;
+        word-break: break-word;
     }
 
     img.fullscreenImg {

@@ -74,28 +74,19 @@ class PageLoader {
                 } else {
                     main.link.click(event.state,false, page); // event.state is pageName, document.location is pageLink
                 }
-
             }
         };
     }
 
     loadPage(pageLink, pushState, page){
-
         this.activePage = main.pageChanger.currentPage;
-
         main.pageChanger.changeTo(page);
         if(this.activePageLink!==pageLink){
             main.ajax.callPage("GET", pageLink,(html)=>{
-
                 let parser = new DOMParser();
-
                 html = parser.parseFromString(html, 'text/html');
-
                 // parts of Head
                 document.title = html.title;
-
-
-
                 /*
                 let metaData = [
                     "meta[name='description']",
@@ -105,18 +96,13 @@ class PageLoader {
                     "link[rel='shortcut icon']",
                     "link[rel='apple-touch-icon']"
                 ];
-
-
-
                 metaData.forEach((metaId)=>{
                     document.querySelector(metaId).outerHTML = html.querySelector(metaId).outerHTML;
                 });
                 */
+                let contentContainer = document.getElementsByClassName("contentContainer")[0];
+                contentContainer.innerHTML = html.body.children[2].innerHTML;
 
-                // Body
-                // TODO: WE CAN CHOOSE BETWEEN SWITCHING HTML OR pageChanger.js
-                // COMMENTED BECAUSE WE DONT NEED TO SWITCH THE BODY CONTENT IN THIS APPLICATION
-                document.body.innerHTML = html.body.innerHTML;
 
                 // JavaScript
                 // TODO: IF SWITCHING HTML IS NEEDED WE NEED TO REINITIALIZE BECAUSE OF REFERENCES FOR HTML ITEMS
@@ -127,16 +113,16 @@ class PageLoader {
                     alert("Setup Error: There needs to be a initialize() method in JavaScript. Error was: "+e);
                 }
                  */
+                // HARDCORE FOR BEKSOFT WEBSITE
+                pricesShown = false; // HARDCODE
+                resetScroll(); // HARDCODE
+
 
                 this.activePageLink = pageLink; // important to update the pageLoader of link, as the javascript is initialized
             });
             this.handleState(pageLink, pushState, this.activePage);
+
         }
-
-        // HARDCORE FOR BEKSOFT WEBSITE
-        pricesShown = false; // HARDCODE
-        resetScroll(); // HARDCODE
-
     }
 }
 
@@ -150,7 +136,7 @@ class PageChanger {
     }
 
     changeTo(newPage){
-        window.scrollTo(0, 0);
+        //window.scrollTo(0, 0);
 
         // change reference of current page
         this.previousPage = this.currentPage;
@@ -191,8 +177,8 @@ function togglePrices(){
 }
 
 function resetScroll(){
-    if(window.innerWidth <= 900){
-        window.scrollTo(0,700);
+    if(window.innerWidth <= 700){
+        window.scrollTo(0,775);
     } else {
         window.scrollTo(0,0);
     }

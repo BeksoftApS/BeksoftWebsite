@@ -2,14 +2,14 @@
 <html lang="da">
 <head>
     <meta charset="UTF-8">
-    <title>Beksoft ApS - Web Applikationer med GO</title>
-    <meta name="description" content="Vi udvikler Web Applikationer med GO til vores kunder. Bestil en Elite Web Applikation i dag og udkonkurrer dine konkurrenter!" />
+    <title>Beksoft ApS - Nye Bæredygtige WebApps med GO</title>
+    <meta name="description" content="Få udviklet en billig bæredygtig webside, der er nem at vedligeholde og som kører på lav ydeevne for at skåne klimaet. Vi laver webbaserede it systemer på den rette teknologi. UD med Wordpress, IND med BekCMS!" />
     <meta name="author" content="Beksoft ApS" />
     <meta name="viewport" content="width=device-width" />
     <meta name="robots" content="index, follow" />
     <meta property="og:locale" content="da_DK" />
     <meta property="og:title" content="Beksoft ApS" />
-    <meta property="og:description" content="Vi udvikler web applikationer med golang til kunder, der har behov for et fremtidssikret IT System. Bestil en Web Applikation eller brug Beksoft ApS som it konsulent ved at kontakte os." />
+    <meta property="og:description" content="Få udviklet en billig bæredygtig webside baseret på GO, der er nem at vedligeholde og som kører på lav ydeevne for at skåne klimaet. Vi laver webbaserede it systemer på den rette teknologi. UD med Wordpress, IND med BekCMS!" />
     <meta property="og:image" content="logo.svg" />
     <meta property="og:url" content="https://beksoft.dk" />
     <meta property="og:site_name" content="Beksoft ApS" />
@@ -18,7 +18,7 @@
     <link rel="icon" href="/images/logo/logo.svg" sizes="any" type="image/svg+xml"/>
     <link rel="apple-touch-icon" href="/images/logo/logo.svg" sizes="any" type="image/svg+xml"/>
     <link href="/minidefault.css" rel="stylesheet" type="text/css">
-    <script src="/minimain.js"></script>
+    <script src="/minimain.js" defer></script>
     <style>
         .beksoftTextColor {
             color: #6bbe54;
@@ -30,14 +30,14 @@
 </head>
 <body>
     <nav>
-        <a href="/omos/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/omos/',true,main.omos);"><img id="logo" alt="Beksoft Logo" src="https://beksoft.dk/logo.svg"></a>
+        <a href="/omos/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/omos/');"><img id="logo" alt="Beksoft Logo" src="https://beksoft.dk/logo.svg"></a>
         <div class="menuLinks">
-            <a class="menuLink" href="/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/',true,main.oversigt);"><span>Oversigt</span></a>
-            <a class="menuLink" href="/service/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/service/',true,main.service);"><span>Service</span></a>
-            <a class="menuLink" href="/produkter/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/produkter/',true,main.produkter);"><span>Produkter</span></a>
-            <a class="menuLink" href="/omos/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/omos/',true,main.omos);"><span>Om os</span></a>
-            <a class="menuLink" href="/presse/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/presse/',true,main.presse);"><span>Presse</span></a>
-            <a class="menuLink" href="/kontakt/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/kontakt/',true,main.kontakt);"><span>Kontakt</span></a>
+            <a class="menuLink" href="/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/')"><span>Oversigt</span></a>
+            <a class="menuLink" href="/service/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/service/');"><span>Service</span></a>
+            <a class="menuLink" href="/produkter/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/produkter/');"><span>Produkter</span></a>
+            <a class="menuLink" href="/omos/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/omos/');"><span>Om os</span></a>
+            <a class="menuLink" href="/presse/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/presse/');"><span>Presse</span></a>
+            <a class="menuLink" href="/kontakt/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/kontakt/');"><span>Kontakt</span></a>
         </div>
         <a href="https://discord.gg/6HJk5bsnY8" target="_blank" style="justify-self: center;"><img class="discordLogo" alt="Join vores discord (Beksoft)" src="/images/other/DiscordLogo.svg"></a>
     </nav>
@@ -58,94 +58,11 @@
         <h2>Oversigt</h2>
         <noscript><p>(JavaScript deaktiveret): Aktiver javascript for at bruge oversigten</p></noscript>
         <div class="boxContainer" style="display: grid;">
-            <a style="text-decoration: none; color: white;" onclick="main.link.click('/service/',true,main.service);"><div class="box centerText"><h3>Service</h3></div></a>
-            <a style="text-decoration: none; color: white;" onclick="main.link.click('/produkter/',true,main.produkter);"><div class="box centerText"><h3>Produkter</h3></div></a>
-            <a style="text-decoration: none; color: white;" onclick="main.link.click('/omos/',true,main.omos);"><div class="box centerText"><h3>Om os</h3></div></a>
-            <a style="text-decoration: none; color: white;" onclick="main.link.click('/kontakt/',true,main.kontakt);"><div class="box centerText"><h3>Kontakt</h3></div></a>
+            <a style="text-decoration: none; color: white;" onclick="pageChanger.changeTo('/service/');"><div class="box centerText"><h3>Service</h3></div></a>
+            <a style="text-decoration: none; color: white;" onclick="pageChanger.changeTo('/produkter/');"><div class="box centerText"><h3>Produkter</h3></div></a>
+            <a style="text-decoration: none; color: white;" onclick="pageChanger.changeTo('/omos/');"><div class="box centerText"><h3>Om os</h3></div></a>
+            <a style="text-decoration: none; color: white;" onclick="pageChanger.changeTo('/kontakt/');"><div class="box centerText"><h3>Kontakt</h3></div></a>
         </div>
-        <br>
-        <br>
-        <br>
-        <h2>Priser</h2>
-        <p>Vores priser er meget forskellige baseret på kundens behov</p>
-        <p>Nedenunder kan der ses estimater på, hvad services kan koste hos os.</p>
-        <p>Husk på at du gennem os kan få tilknyttet en webdesigner, der står for designet, som vi kan integrere sammen med teknikken.</p>
-        <p>Bemærk at priserne kun er vejledende (inklusiv moms):</p>
-        <noscript><p>(JavaScript deaktiveret): Aktiver javascript for at kunne åbne prislisten</p></noscript>
-        <button onclick="togglePrices();" class="showPricesButton">Se Priser</button>
-        <div id="prices" style="display: none; border: 2px solid #408060; padding: 10px; margin-top: 15px; margin-bottom: 15px;">
-            <h3>Konsulent Service</h3>
-            <p>Per kunde: Første 6 timer gratis, derefter 500dkk per time</p>
-            <p>Loyale kunder: Individuelle priser under 400dkk per time</p>
-            <h3>BEKCMS (anbefales - Kan fås fra januar 2022)</h3>
-            <ul>
-                <li>Simpel Webside med BEKCMS: 1000dkk</li>
-                <li>Advanceret Webside med BEKCMS: 3000dkk</li>
-                <li>Elite Webside eller Webshop med BEKCMS: 6000dkk</li>
-                <li>Shared Hosting af webside med BEKCMS på vores Cloud VPS: 100dkk per år</li>
-                <li>Cloud VPS for din virksomhed gennem os: 150dkk per måned</li>
-                <li>Web Design Pakken (kan fås oveni overstående pakker), Freelancer udvikler smukt design til omkring 5000dkk ekstra</li>
-            </ul>
-            <h3>Wordpress</h3>
-            <ul>
-                <li>Simpel Webside med Wordpress: 3500dkk</li>
-                <li>Advanceret Webside med Wordpress: 11000dkk</li>
-                <li>Wordpress Websider kan ikke opnå elite status</li>
-                <li>Webshop med Wordpress: 25000dkk</li>
-            </ul>
-            <h3>Software Applikation</h3>
-            <ul>
-                <li>Web Applikation: Pris afhænger af størrelse</li>
-                <li>Native Applikation: Pris afhænger af størrelse</li>
-                <li>Mobil Applikation: Pris afhænger af størrelse</li>
-                <li>Spiludvikling: Pris afhænger af størrelse</li>
-            </ul>
-            <h3>Vores Produkter</h3>
-            <ul>
-                <li>BEKCMS licens: 500dkk per år</li>
-                <li>BEKCMS Reselling licens: 5000dkk per år</li>
-                <li>SmileyApp Licens: efter aftale men mindst 100000dkk per år</li>
-            </ul>
-            <h3>Backup og support</h3>
-            <ul>
-                <li>IT Support Pakke: 500kroner per måned (op til 10 timer)</li>
-                <li>IT Support Pakke: 1500kroner per måned (op til 37 timer)</li>
-                <li>Daglig Backup Aftale: 500dkk per år (op til 100gb)</li>
-            </ul>
-        </div>
-        <br>
-        <br>
-        <p>Kontakt os for at høre mere, priser kan variere alt efter behov.</p>
-        <p>I kan gå til vores discord i venstre side og begynde at skrive til os uden at skulle finde login eller email frem.</p>
-        <br>
-        <br>
-        <br>
-        <h2>Promoveringer</h2>
-        <article style="border: 2px solid #408060; padding: 10px;">
-            <h3>Lynhurtig, Elite-SEO og Sikker Webside</h3>
-            <p>Vores websider er lynhurtige, har super god SEO og er topsikret</p>
-            <p>Tag ikke bare vores ord for det, tjek vores side på følgende platforme (skriv beksoft.dk):</p>
-            <p><a style="color: #408060" href="https://sikkerpånettet.dk">https://sikkerpånettet.dk</a></p>
-            <p><a style="color: #408060" href="https://www.seobility.net/en/seocheck/">seobility seocheck</a></p>
-            <p><a style="color: #408060" href="https://gtmetrix.com">GTMetrix</a></p>
-            <p><a style="color: #408060" href="https://developers.google.com/speed/pagespeed/insights/?hl=da">Google Pagespeed insights</a></p>
-            <p>Sammenlign derefter med din side eller en side du anvender.</p>
-            <p style="font-weight: 700;">Lars Morten Bek | 09-10-2021</p>
-        </article>
-        <br>
-        <br>
-        <br>
-        <h2>Seneste Nyt</h2>
-        <article style="border: 2px solid #408060; padding: 10px;">
-            <h3>Cybersikkerhedsmåned</h3>
-            <p>Vi kører i øjeblikket en kampagne, hvor vi vil gøre opmærksom på IT Sikkerheden.</p>
-            <p>Alt for få har styr på sikkerheden og det kan gå ud over både arbejdet såvel som privatlivet,</p>
-            <p>derfor vil vi tilbyde professionel hjælp til både private og virksomheder.</p>
-            <p>Det kunne være I skal anskaffe jer en password manager, sætte noget 2 faktor authentication op</p>
-            <p>eller få kigget på jeres IT Sikkerhed ved for eksempel DNS eller backup</p>
-            <p>I hele oktober tilbyder vi gratis konsulentarbejde for cybersikkerhed for at sprede vores netværk</p>
-            <p style="font-weight: 700;">Lars Morten Bek | 09-10-2021</p>
-        </article>
         <br>
         <br>
         <br>

@@ -2,14 +2,14 @@
 <html lang="da">
 <head>
     <meta charset="UTF-8">
-    <title>Om Beksoft ApS</title>
-    <meta name="description" content="Vores mål er at lave software til virksomheder, så deres IT-systemer eller websider kan vedligeholdes så effektivt og hurtigt som muligt." />
+    <title>Om Os</title>
+    <meta name="description" content="Vi er en virksomhed, som har specialiseret sig i webbaserede it systemer. Vi udvikler det meste af vores software med GO (Golang) og udvikler skræddersyede softwareløsninger til private, små og mellemstore og store virksomheder." />
     <meta name="author" content="Beksoft ApS" />
     <meta name="viewport" content="width=device-width" />
     <meta name="robots" content="index, follow" />
     <meta property="og:locale" content="da_DK" />
     <meta property="og:title" content="Beksoft ApS" />
-    <meta property="og:description" content="Vores mål er at lave software til virksomheder, så deres IT-systemer kan vedligeholdes så effektivt og hurtigt som muligt. Kontakt os og lad os finde ud af, hvordan vi kan hjælpe med at forbedre jeres IT-systemer. Kontakt os på kontakt@beksoft.dk" />
+    <meta property="og:description" content="Vi er en virksomhed, som har specialiseret sig i webbaserede it systemer. Vi udvikler det meste af vores software med GO (Golang) og udvikler skræddersyede softwareløsninger til private, små og mellemstore og store virksomheder." />
     <meta property="og:image" content="logo.svg" />
     <meta property="og:url" content="https://beksoft.dk" />
     <meta property="og:site_name" content="Beksoft ApS" />
@@ -18,18 +18,18 @@
     <link rel="icon" href="/images/logo/logo.svg" sizes="any" type="image/svg+xml"/>
     <link rel="apple-touch-icon" href="/images/logo/logo.svg" sizes="any" type="image/svg+xml"/>
     <link href="/minidefault.css" rel="stylesheet" type="text/css">
-    <script src="/minimain.js"></script>
+    <script src="/minimain.js" defer></script>
 </head>
 <body>
 <nav>
-    <a href="/omos/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/omos/',true,main.omos);"><img id="logo" alt="Beksoft Logo" src="https://beksoft.dk/logo.svg"></a>
+    <a href="/omos/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/omos/');"><img id="logo" alt="Beksoft Logo" src="https://beksoft.dk/logo.svg"></a>
     <div class="menuLinks">
-        <a class="menuLink" href="/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/',true,main.oversigt);"><span>Oversigt</span></a>
-        <a class="menuLink" href="/service/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/service/',true,main.service);"><span>Service</span></a>
-        <a class="menuLink" href="/produkter/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/produkter/',true,main.produkter);"><span>Produkter</span></a>
-        <a class="menuLink" href="/omos/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/omos/',true,main.omos);"><span>Om os</span></a>
-        <a class="menuLink" href="/presse/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/presse/',true,main.presse);"><span>Presse</span></a>
-        <a class="menuLink" href="/kontakt/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/kontakt/',true,main.kontakt);"><span>Kontakt</span></a>
+        <a class="menuLink" href="/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/')"><span>Oversigt</span></a>
+        <a class="menuLink" href="/service/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/service/');"><span>Service</span></a>
+        <a class="menuLink" href="/produkter/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/produkter/');"><span>Produkter</span></a>
+        <a class="menuLink" href="/omos/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/omos/');"><span>Om os</span></a>
+        <a class="menuLink" href="/presse/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/presse/');"><span>Presse</span></a>
+        <a class="menuLink" href="/kontakt/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/kontakt/');"><span>Kontakt</span></a>
     </div>
     <a href="https://discord.gg/6HJk5bsnY8" target="_blank" style="justify-self: center;"><img class="discordLogo" alt="Join vores discord (Beksoft)" src="/images/other/DiscordLogo.svg"></a>
 </nav>
@@ -37,7 +37,7 @@
 <article class="contentContainer" style="display: block;">
     <h1>Om os</h1>
     <p>Beksoft ApS er en lille virksomhed drevet af Lars Morten Bek.</p>
-    <p>Beksoft startede som Beksoft IVS den 22 Februar, og i november 2020 blev det til Beksoft ApS,
+    <p>Beksoft startede som Beksoft IVS den 22 Februar 2019. Den november 2020 blev det til Beksoft ApS,
         da der blev indskudt egenkapital i virksomheden.</p>
     <br>
     <h2>Vores Cases</h2>
@@ -76,20 +76,19 @@
     <h4>Adm. Direktør & Software Arkitekt</h4>
     <br>
     <h3>Om LMB</h3>
-    <p>26 årig dansker der bor i Odense</p>
+    <p>27 årig dansker der bor i Odense</p>
     <p>Færdiguddannet Bachelor i Datalogi og Informatik fra Roskilde Universitet</p>
     <p>Spidskompetencer: Network og Sikkerhed, Webbaseret IT, Oppetid og ressourceovervågning, Netværksbaseret kommunikation.</p>
-    <p>Programmeringssprog Backend: Golang, Python, Java, C# (.Net), C++, PHP, JavaScript (NodeJS)</p>
-    <p>Programmeringssprog Frontend: JavaScript</p>
-    <p>Markup og design: HTML, CSS, SVG</p>
-    <p>I starten af Beksoft ApS tid, vil det meste af vores software være centreret omkring den administrerende direktørs kompetencer.</p>
-    <p>Mellem 2008-2021 har Lars arbejdet med Webbaserede IT Applikationer i alle former,</p>
-    <p>han arbejder som IT Architekt på højt niveau og kan arbejde som Fullstack Developer</p>
+    <p>Backend: Golang</p>
+    <p>Frontend: JavaScript (ekspert vanilla), html, css </p>
+    <br>
+    <p>Mellem 2008-2023 har Lars arbejdet med Webbaserede IT Applikationer i alle former,</p>
+    <p>han arbejder som IT Arkitekt på højt teoretisk og praktisk niveau</p>
     <p>Kompetencer kan læses på hans <a class="greenLightning" href="https://www.linkedin.com/in/lmbek/" target="_blank">Linkedin profil</a></p>
     <br>
     <br>
     <h2>Partnere</h2>
-    <p>Vi har pt ingen partner software virksomheder. Skriv hvis jeres virksomhed søger partnerskab.</p>
+    <p>Vi har pt ingen partner software virksomheder. Skriv hvis jeres virksomhed søger partnerskab. (bemærk, vi søger kun danske virksomheder som partnere)</p>
     <br>
     <br>
 </article>

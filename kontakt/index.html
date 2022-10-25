@@ -19,24 +19,29 @@
     <link rel="apple-touch-icon" href="/images/logo/logo.svg" sizes="any" type="image/svg+xml"/>
     <link href="/minidefault.css" rel="stylesheet" type="text/css">
     <script src="/minimain.js" defer></script>
+    <style>
+        #logo {
+            width: 163px;
+            height: 202px;
+        }
+    </style>
 </head>
 <body>
-<noscript>JavaScript is turned off, please turn it on!</noscript>
 <nav>
-    <a href="/omos/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/omos/',true,main.omos);"><img id="logo" alt="Beksoft Logo" src="https://beksoft.dk/logo.svg"></a>
+    <a href="/omos/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/omos/');"><img id="logo" alt="Beksoft Logo" src="https://beksoft.dk/logo.svg"></a>
     <div class="menuLinks">
-        <a class="menuLink" href="/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/',true,main.oversigt);"><span>Oversigt</span></a>
-        <a class="menuLink" href="/service/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/service/',true,main.service);"><span>Service</span></a>
-        <a class="menuLink" href="/produkter/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/produkter/',true,main.produkter);"><span>Produkter</span></a>
-        <a class="menuLink" href="/omos/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/omos/',true,main.omos);"><span>Om os</span></a>
-        <a class="menuLink" href="/presse/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/presse/',true,main.presse);"><span>Presse</span></a>
-        <a class="menuLink" href="/kontakt/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/kontakt/',true,main.kontakt);"><span>Kontakt</span></a>
+        <a class="menuLink" href="/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/')"><span>Oversigt</span></a>
+        <a class="menuLink" href="/service/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/service/');"><span>Service</span></a>
+        <a class="menuLink" href="/produkter/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/produkter/');"><span>Produkter</span></a>
+        <a class="menuLink" href="/omos/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/omos/');"><span>Om os</span></a>
+        <a class="menuLink" href="/presse/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/presse/');"><span>Presse</span></a>
+        <a class="menuLink" href="/kontakt/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/kontakt/');"><span>Kontakt</span></a>
     </div>
     <a href="https://discord.gg/6HJk5bsnY8" target="_blank" style="justify-self: center;"><img class="discordLogo" alt="Join vores discord (Beksoft)" src="/images/other/DiscordLogo.svg"></a>
 </nav>
 <div class="filler"></div>
-<div class="contentContainer" style="display: block;">
-    <h1>Kontakt</h1>
+<article class="contentContainer" style="display: block;">
+    <h1>Kontakt os</h1>
     <p>Vi foretrækker kontakt over email. Skriv en email for at aftale et møde over nettet gennem videoopkald.</p>
     <p>Vi anbefaler Google Meetings eller Discord. </p>
     <p>Beksoft ApS kan oprette et mødelink og sende til jer på det aftalte tidspunkt.</p>
@@ -56,6 +61,8 @@
     <p>Vi logger ingen personfølsomme oplysninger ved brug af denne hjemmeside,</p>
     <p>derfor er der ikke behov for en privatlivspolitik på denne side.</p>
     <p>Hvis dine oplysninger (som gennem mailkontakt) ønskes slettet fra vores system bedes dette oplyst over gdpr@beksoft.dk</p>
-</div>
+    <br>
+    <br>
+</article>
 </body>
 </html>

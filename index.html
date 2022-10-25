@@ -2,14 +2,14 @@
 <html lang="da">
 <head>
     <meta charset="UTF-8">
-    <title>Beksoft ApS - Bestil Et Skræddersyet Web Applikation</title>
-    <meta name="description" content="Vores mål er at lave software til virksomheder, så deres IT-systemer eller websider kan vedligeholdes så effektivt og hurtigt som muligt." />
+    <title>Beksoft ApS - Nye Bæredygtige WebApps med GO</title>
+    <meta name="description" content="Få udviklet en billig bæredygtig webside, der er nem at vedligeholde og som kører på lav ydeevne for at skåne klimaet. Vi laver webbaserede it systemer på den rette teknologi. UD med Wordpress, IND med BekCMS!" />
     <meta name="author" content="Beksoft ApS" />
     <meta name="viewport" content="width=device-width" />
     <meta name="robots" content="index, follow" />
     <meta property="og:locale" content="da_DK" />
     <meta property="og:title" content="Beksoft ApS" />
-    <meta property="og:description" content="Vores mål er at lave software til virksomheder, så deres IT-systemer kan vedligeholdes så effektivt og hurtigt som muligt. Kontakt os og lad os finde ud af, hvordan vi kan hjælpe med at forbedre jeres IT-systemer. Kontakt os på kontakt@beksoft.dk" />
+    <meta property="og:description" content="Få udviklet en billig bæredygtig webside baseret på GO, der er nem at vedligeholde og som kører på lav ydeevne for at skåne klimaet. Vi laver webbaserede it systemer på den rette teknologi. UD med Wordpress, IND med BekCMS!" />
     <meta property="og:image" content="logo.svg" />
     <meta property="og:url" content="https://beksoft.dk" />
     <meta property="og:site_name" content="Beksoft ApS" />
@@ -18,100 +18,57 @@
     <link rel="icon" href="/images/logo/logo.svg" sizes="any" type="image/svg+xml"/>
     <link rel="apple-touch-icon" href="/images/logo/logo.svg" sizes="any" type="image/svg+xml"/>
     <link href="/minidefault.css" rel="stylesheet" type="text/css">
-    <script src="/minimain.js"></script>
+    <script src="/minimain.js" defer></script>
+    <style>
+        #logo {
+            width: 163px;
+            height: 202px;
+        }
+        .beksoftTextColor {
+            color: #6bbe54;
+        }
+        .golangTextColor {
+            color: #00acd7;
+        }
+    </style>
 </head>
 <body>
-    <noscript>JavaScript is turned off, please turn it on!</noscript>
     <nav>
-        <a href="/omos/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/omos/',true,main.omos);"><img id="logo" alt="Beksoft Logo" src="https://beksoft.dk/logo.svg"></a>
+        <a href="/omos/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/omos/');"><img id="logo" alt="Beksoft Logo" src="https://beksoft.dk/logo.svg"></a>
         <div class="menuLinks">
-            <a class="menuLink" href="/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/',true,main.oversigt);"><span>Oversigt</span></a>
-            <a class="menuLink" href="/service/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/service/',true,main.service);"><span>Service</span></a>
-            <a class="menuLink" href="/produkter/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/produkter/',true,main.produkter);"><span>Produkter</span></a>
-            <a class="menuLink" href="/omos/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/omos/',true,main.omos);"><span>Om os</span></a>
-            <a class="menuLink" href="/presse/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/presse/',true,main.presse);"><span>Presse</span></a>
-            <a class="menuLink" href="/kontakt/" style="text-decoration: none;" onclick="event.preventDefault(); main.link.click('/kontakt/',true,main.kontakt);"><span>Kontakt</span></a>
+            <a class="menuLink" href="/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/')"><span>Oversigt</span></a>
+            <a class="menuLink" href="/service/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/service/');"><span>Service</span></a>
+            <a class="menuLink" href="/produkter/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/produkter/');"><span>Produkter</span></a>
+            <a class="menuLink" href="/omos/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/omos/');"><span>Om os</span></a>
+            <a class="menuLink" href="/presse/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/presse/');"><span>Presse</span></a>
+            <a class="menuLink" href="/kontakt/" style="text-decoration: none;" onclick="event.preventDefault(); pageChanger.changeTo('/kontakt/');"><span>Kontakt</span></a>
         </div>
         <a href="https://discord.gg/6HJk5bsnY8" target="_blank" style="justify-self: center;"><img class="discordLogo" alt="Join vores discord (Beksoft)" src="/images/other/DiscordLogo.svg"></a>
     </nav>
     <div class="filler"></div>
-    <div class="contentContainer" style="display: block;">
-        <h1>Velkommen til Beksoft ApS</h1>
-        <p>Hos Beksoft ApS udvikler vi innovativ ny teknologi med fokus på netværk. Vi er specialiseret i at udvikle web applikationer og multicollaboration software med netværksprogrammering.</p>
-        <p>Hos os kan du bestille konsulentservice til sikkerhedstjek og/eller implementering af Software, Websider og andet IT.</p>
-        <p>Du kan også bestille en webside, web applikation, skræddersyet software til dine behov eller købe licenser til software. Så igen velkommen til og spørg endelig ind til, hvad vi arbejder med,</p>
-        <p>så vi kan fortælle, hvordan web applikationer bliver bygget med nutidens og fremtidens standarder.</p>
+    <article class="contentContainer">
+        <h1>Få Udviklet <span class="beksoftTextColor">Web Applikationer</span> med <span class="golangTextColor">GO</span></h1>
+        <img width="644" height="1000" id="larswithbeksoftlogo" alt="Administrerende Direktør og Software Arkitekt. Lars Morten Bek" src="/images/lars/larswithbeksoftlogocut.webp">
+        <p style="font-weight: 700;">Velkommen til <span class="beksoftTextColor">Beksoft ApS</span>!</p>
+        <p>Vi udvikler innovativ ny teknologi med fokus på <span class="beksoftTextColor">netværk</span> og <span class="beksoftTextColor">it sikkerhed</span>. Vi er specialiseret i at udvikle <span class="golangTextColor">web applikationer</span> og <span class="golangTextColor">multicollaboration software</span> med netværksprogrammering.</p>
+        <p>Hos os kan du bestille <span class="beksoftTextColor">konsulentservice</span> til <span class="beksoftTextColor">sikkerhedstjek</span> og/eller implementering af Software, Websider og andet IT. Du kan også bestille en webside, web applikation, skræddersyet software til dine behov eller købe licenser til software.</p>
+        <p>Vores Web Applikationer bliver bygget med <span class="golangTextColor">nutidens</span> og <span class="golangTextColor">fremtidens</span> standarder.</p>
+        <br>
+        <h2><span class="beksoftTextColor">Bæredygtig</span> <span class="golangTextColor">Golang</span> Development</h2>
+        <p>Vi foretager det meste af vores udvikling i Golang, det er i efterspørgsel, mens sprog som PHP og Java bliver mere og mere upopulære</p>
+        <p>Vi går meget op i et nyt koncept med <span class="beksoftTextColor">bæredygtige websider</span>. En webside er ikke bæredygtig, hvis den blandt andet ikke har <span class="golangTextColor">"Separation of Concerns"</span>. Over 35% af internettet er i dag baseret på en gammel teknologi som wordpress (fra 2003), der er udviklet med blandt andet PHP og MySQL totalt kludret sammen. Dette er farligt, da det kræver flere udviklingstimer, og man mister struktur og hastighed på siden, som er vigtigt for meget bedre SEO.</p>
+        <p>Særligt i England og USA vokser programmeringssproget GO enormt. Vi tilbyder din virksomhed en fremtidssikret IT Platform.</p>
         <br>
         <h2>Oversigt</h2>
+        <noscript><p>(JavaScript deaktiveret): Aktiver javascript for at bruge oversigten</p></noscript>
         <div class="boxContainer" style="display: grid;">
-            <a style="text-decoration: none; color: white;" onclick="main.link.click('/service/',true,main.service);"><div class="box centerText"><h3>Service</h3></div></a>
-            <a style="text-decoration: none; color: white;" onclick="main.link.click('/produkter/',true,main.produkter);"><div class="box centerText"><h3>Produkter</h3></div></a>
-            <a style="text-decoration: none; color: white;" onclick="main.link.click('/omos/',true,main.omos);"><div class="box centerText"><h3>Om os</h3></div></a>
-            <a style="text-decoration: none; color: white;" onclick="main.link.click('/kontakt/',true,main.kontakt);"><div class="box centerText"><h3>Kontakt</h3></div></a>
+            <a style="text-decoration: none; color: white;" onclick="pageChanger.changeTo('/service/');"><div class="box centerText"><h3>Service</h3></div></a>
+            <a style="text-decoration: none; color: white;" onclick="pageChanger.changeTo('/produkter/');"><div class="box centerText"><h3>Produkter</h3></div></a>
+            <a style="text-decoration: none; color: white;" onclick="pageChanger.changeTo('/omos/');"><div class="box centerText"><h3>Om os</h3></div></a>
+            <a style="text-decoration: none; color: white;" onclick="pageChanger.changeTo('/kontakt/');"><div class="box centerText"><h3>Kontakt</h3></div></a>
         </div>
         <br>
-        <h2>Promoveringer</h2>
-        <article style="border: 2px solid #408060; padding: 10px;">
-            <h2>Lynhurtig, Elite-SEO og Sikker Webside</h2>
-            <p>Vores websider er lynhurtige, har smadder god SEO og er topsikret</p>
-            <p>Tag ikke bare vores ord for det, tjek vores side på følgende platforme (skriv beksoft.dk):</p>
-            <p><a style="color: #408060" href="https://sikkerpånettet.dk">https://sikkerpånettet.dk</a></p>
-            <p><a style="color: #408060" href="https://www.seobility.net/en/seocheck/">https://www.seobility.net/en/seocheck/</a></p>
-            <p><a style="color: #408060" href="https://gtmetrix.com">https://gtmetrix.com</a></p>
-            <p><a style="color: #408060" href="https://developers.google.com/speed/pagespeed/insights/?hl=da">https://developers.google.com/speed/pagespeed/insights/</a></p>
-            <p>Sammenlign derefter med din side eller en side du anvender.</p>
-            <p style="font-weight: 700;">Lars Morten Bek | 09-10-2021</p>
-        </article>
-        <h2>Seneste Nyt</h2>
-        <article style="border: 2px solid #408060; padding: 10px;">
-            <h2>Cybersikkerhedsmåned</h2>
-            <p>Vi kører i øjeblikket en kampagne, hvor vi vil gøre opmærksom på IT Sikkerheden.</p>
-            <p>Alt for få har styr på sikkerheden og det kan gå ud over både arbejdet såvel som privatlivet,</p>
-            <p>derfor vil vi tilbyde professionel hjælp til både private og virksomheder.</p>
-            <p>Det kunne være I skal anskaffe jer en password manager, sætte noget 2 faktor authentication op</p>
-            <p>eller få kigget på jeres IT Sikkerhed ved for eksempel DNS eller backup</p>
-            <p>I hele oktober tilbyder vi gratis konsulentarbejde for cybersikkerhed for at sprede vores netværk</p>
-            <p style="font-weight: 700;">Lars Morten Bek | 09-10-2021</p>
-        </article>
-        <h2>Priser</h2>
-        <p>Vores priser er meget forskellige baseret på kundens behov</p>
-        <p>Nedenunder kan der ses estimater på, hvad services kan koste hos os.</p>
-        <p>Bemærk at priserne kun er vejledende (inklusiv moms):</p>
-        <button onclick="togglePrices();" class="showPricesButton">Se Priser</button>
-        <div id="prices" style="display: none; border: 2px solid #408060; padding: 10px; margin-top: 15px; margin-bottom: 15px;">
-            <h3>Konsulent Service</h3>
-            <p>Per kunde: Første 6 timer gratis, derefter 500dkk per time</p>
-            <p>Loyale kunder: Individuelle priser under 400dkk per time</p>
-            <h3>BEKCMS</h3>
-            <ul>
-                <li>Simpel Webside med BEKCMS: 1000dkk</li>
-                <li>Advanceret Webside med BEKCMS: 3000dkk</li>
-                <li>Elite Webside eller Webshop med BEKCMS: 6000dkk</li>
-                <li>Shared Hosting af webside med BEKCMS på vores Cloud VPS: 100dkk per år</li>
-                <li>Cloud VPS for din virksomhed gennem os: 150dkk per måned</li>
-            </ul>
-            <h3>Wordpress</h3>
-            <ul>
-                <li>Simpel Webside med Wordpress: 3500dkk</li>
-                <li>Advanceret Webside med Wordpress: 11000dkk</li>
-                <li>Webshop med Wordpress: 25000dkk</li>
-            </ul>
-            <h3>Vores Produkter</h3>
-            <ul>
-                <li>BEKCMS licens: 500dkk per år</li>
-                <li>BEKCMS Reselling licens: 5000dkk per år</li>
-                <li>SmileyApp Licens: efter aftale men mindst 100000dkk per år</li>
-            </ul>
-            <h3>Backup og support</h3>
-            <ul>
-                <li>IT Support Pakke: 500kroner per måned (op til 10 timer)</li>
-                <li>IT Support Pakke: 1500kroner per måned (op til 37 timer)</li>
-                <li>Daglig Backup Aftale: 500dkk per år (op til 100gb)</li>
-            </ul>
-        </div>
         <br>
-        <p>Kontakt os for at høre mere, priser kan variere alt efter behov.</p>
-        <p>I kan gå til vores discord i venstre side og begynde at skrive til os uden at skulle finde login eller email frem.</p>
         <br>
         <h2>Kontakt Information</h2>
         <p>Email (Salg): salg@beksoft.dk</p>
@@ -129,11 +86,14 @@
         <p>Like Beksoft ApS på vores sociale medier og få opdateringer løbende, hvordan det går os med udviklingen.</p>
         <p>Dermed kan i også få direkte besked, når der kommer promoveringer eller tilbud.</p>
         <br>
+        <br>
+        <br>
         <h2>Privatlivspolitik</h2>
         <p>Vi logger ingen personfølsomme oplysninger ved brug af denne hjemmeside,</p>
         <p>derfor er der ikke behov for en privatlivspolitik på denne side.</p>
         <p>Hvis dine oplysninger (som gennem mailkontakt) ønskes slettet fra vores system bedes dette oplyst over gdpr@beksoft.dk</p>
         <br>
-    </div>
+        <br>
+    </article>
 </body>
 </html>

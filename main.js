@@ -130,6 +130,7 @@ class PageChanger {
             this.changeBody(html.body)
             // start from the top of the page
             //window.scrollTo(0, 0);
+            resetScroll()
             return then()
         })
     }
